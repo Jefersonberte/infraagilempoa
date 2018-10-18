@@ -1,0 +1,10 @@
+---
+# tasks file for default
+
+
+
+    
+- name: instacao docker 
+  include: docker.yaml
+
+

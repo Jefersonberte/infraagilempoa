@@ -1,0 +1,14 @@
+---
+# tasks file for default
+
+- name: pacotes padroes para debian
+  include: debian.yaml
+  when: ansible_os_family == "Debian"
+
+- name: pacotes padroes para centos
+  include: centos.yaml
+  when: ansible_os_family == "RedHat"
+
+- name: arquivo para criar pagina web 
+  include: arquivo.yaml
+  

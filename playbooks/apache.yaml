@@ -1,0 +1,20 @@
+--- 
+- name: confi serv web
+  hosts: "{{maquina}}"
+  vars:
+   - maquina: default
+  tasks:
+   - name: garantindo o apache instaladao
+     package: 
+      name: apache2
+     when: ansible_os_family == "Debian"
+
+   - name: garantindo apache instalado em redhat
+     package: 
+      name: httpd
+     when: ansible_os_family == "RedHat"
+
+   - name: criando pagina web
+     template:
+      src: index
+      dest: /var/www/html/index.html

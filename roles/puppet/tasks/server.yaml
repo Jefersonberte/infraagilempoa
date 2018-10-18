@@ -1,0 +1,8 @@
+
+- name: instalando puppet server na maquina devops
+  package:
+   name: puppetserver
+   state: present
+  when: ansible_hostname == "devops"
+
+

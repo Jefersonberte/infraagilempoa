@@ -1,0 +1,6 @@
+- name: pacotes padroes para maquinas centos
+  package:
+   name:
+    - httpd 
+   state: present
+

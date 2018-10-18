@@ -1,0 +1,10 @@
+<marquee>
+<h1>
+{{time}} nao tem mundial
+<br>
+host da maquina {{ansible_hostname}}
+<br>
+familia da maquina {{ansible_os_family}}
+
+</h1>
+</marquee>

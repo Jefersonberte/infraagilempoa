@@ -1,0 +1,6 @@
+
+- name: criando pagina web
+  template:
+   src: templates/index
+   dest: /var/www/html/index.html
+  notify: restart apache centos

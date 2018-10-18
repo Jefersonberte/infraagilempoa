@@ -1,0 +1,5 @@
+
+- name: chama minha segunda role
+  hosts: all
+  roles:
+   - web

@@ -1,0 +1,11 @@
+---
+# tasks file for default
+
+- name: instacao repositorios 
+  include: repo.yaml
+    
+- name: instacao puppet-agent 
+  include: agent.yaml
+
+- name: instacao puppetserver 
+  include: server.yaml

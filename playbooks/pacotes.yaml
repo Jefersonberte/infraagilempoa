@@ -1,0 +1,29 @@
+---
+
+- name:  instalacao de pacotes 
+  hosts: "{{maquina}}"
+  tasks: 
+   - name: instalando pacotes debian
+     package: 
+      name: 
+       - vim
+       - apache2
+      state: present
+     when: ansible_os_family == "Debian"
+    
+   - name: instalando pacotes redhat
+     package: 
+      name: 
+       - epel-release
+       - httpd
+      state: present
+     when: ansible_os_family == "RedHat"
+
+   - name: instalando pacotes gerais
+     package:
+      name:
+       - htop
+       - cowsay
+       - figlet
+      state: present
+     
